@@ -1,2 +1,2 @@
-import { imprimirReloj as reloj } from "./script/Reloj";
-reloj()
+import { imprimirReloj } from "./script/Reloj.js";
+imprimirReloj()

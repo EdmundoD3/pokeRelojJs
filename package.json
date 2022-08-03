@@ -1,0 +1,21 @@
+{
+  "name": "pokewatch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdmundoD3/pokeRelojJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdmundoD3/pokeRelojJs/issues"
+  },
+  "homepage": "https://github.com/EdmundoD3/pokeRelojJs#readme"
+}
