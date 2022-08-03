@@ -1,0 +1,120 @@
+/* fondo */
+
+.container {
+    width: 100vh;
+    height: 75vh;
+    display: flex;
+}
+.background-1 {
+    flex-grow: 3;
+    height: 100%;
+    background-color: hsl(240deg 6% 90%);
+    border: solid  hsl(204deg 38% 49%);
+    border-width: 1vh 0 1vh 0;
+
+}
+.background-2 {
+    flex-grow: 9;
+    height: 100%;
+    padding: 1vh 0;
+    background-color: hsl(20deg 3% 19%);
+    border: solid  hsl(77deg 12% 11%);
+    border-width: 0 2vh 0 2vh;
+}
+.background-3 {
+    flex-grow: 5;
+    height: 100%;
+    background-color: hsl(240deg 6% 90%);
+    border: solid  hsl(204deg 38% 49%);
+    border-width: 1vh 0 1vh 0;
+}
+/* pantalla */
+.pk-screen {
+    position: relative;
+    font-size: 50px;
+    color: #3d4e28;
+}
+.screen {
+    position: absolute;
+    width: 77vh;
+    height: 60vh;
+    background-color: #6db072;
+    z-index: 20;
+    transform: translateX(-15vh) translateY(5vh);
+    border: 1vh inset  hsl(77deg 12% 11%);
+}
+
+.screen:active {
+    background-color: #7fbb83;
+}
+
+/* botones */
+.btn{
+    position: absolute;
+    background-color: hsl(358deg 94% 61%);
+    width: 13vh;
+    height: 25vh;
+    transform: translateX(69.2vh) translateY(12vh);
+    border-radius: 5% 75% 0 0;
+    
+    
+    
+}
+.btn:active {
+    background-color: #c55072;
+}
+.top {
+    border: 1vh solid  hsl(77deg 12% 11%);
+    clip-path: inset(0 10% 0% 0%);
+}
+.bottom {
+    border: 1vh solid  hsl(77deg 12% 11%);
+    transform: translateX(69.2vh) translateY(36vh);
+    border-radius: 0 0 75% 5%;
+    clip-path: inset(0 10% 0 0);
+    
+}
+
+/* cuadritos */
+#tabla {
+    display: inline-block;
+    width: 73.6vh;
+    height: 28.8vh;
+    
+    z-index: 25;
+}
+.App-screen {
+    width: 70.4vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transform: translateX(5vh) translateY(15vh);
+}
+.cuadro {
+    
+    margin: 0;
+    padding: 0;
+    width: 3.2vh;
+    height: 3.2vh;
+    z-index: 26;
+}
+.cuadro-marcado {
+    background-color: #3d4e28;
+}
+.cuadro-vacio {
+    background-color: #6db072;
+}
+.screen:active .cuadro-vacio {
+    background-color: #7fbb83;
+}
+
+/* Relog */
+/* imagen pikachu */
+.pikareloj {
+    display: inline-block;
+    position: absolute;
+    transform: translateX(5vh) translateY(35vh) rotatey(180deg);
+    mix-blend-mode: multiply;
+    filter: grayscale(100%); 
+    width: 12vh;
+}
