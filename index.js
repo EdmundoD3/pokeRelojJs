@@ -1,2 +1,4 @@
-import { imprimirReloj } from "./script/Reloj.js";
-imprimirReloj()
+import { pokeReloj } from "./script/Reloj.js";
+//import { contador } from "./script/contador.js";
+pokeReloj()
+//contador()

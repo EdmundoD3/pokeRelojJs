@@ -1,16 +1,4 @@
-const tablaDeNumeros = [ // [numero][ejey][ejex]
-    [[1,1,1,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,1,1,1,0]], //0
-    [[0,0,1,0,0],[0,0,1,0,0],[0,0,1,0,0],[0,0,1,0,0],[0,0,1,0,0],[0,0,1,0,0],[0,0,1,0,0],[0,0,1,0,0],[0,0,1,0,0]], //1
-    [[1,1,1,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0],[1,1,1,1,0],[1,0,0,0,0],[1,0,0,0,0],[1,0,0,0,0],[1,1,1,1,0]], //2
-    [[1,1,1,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0],[1,1,1,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0],[1,1,1,1,0]], //3
-    [[1,0,0,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,1,1,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0]], //4
-    [[1,1,1,1,0],[1,0,0,0,0],[1,0,0,0,0],[1,0,0,0,0],[1,1,1,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0],[1,1,1,1,0]], //5
-    [[1,1,1,1,0],[1,0,0,0,0],[1,0,0,0,0],[1,0,0,0,0],[1,1,1,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,1,1,1,0]], //6
-    [[1,1,1,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0]], //7
-    [[1,1,1,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,1,1,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,1,1,1,0]], //8
-    [[1,1,1,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,0,0,1,0],[1,1,1,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0],[0,0,0,1,0]], //9
-    [[0,0],[0,0],[1,0],[0,0],[0,0],[0,0],[1,0],[0,0],[0,0]] //:
-]
+import { tablaDeNumeros } from "./pixelArt.js";
 
 const getArrayDate = () => {
     const clock = new Date()
@@ -37,20 +25,35 @@ const getArrayDate = () => {
 }
 const pixNum = (numero=2,ejey=0) => {
     tablaDeNumeros[numero][ejey].forEach( ejex => {
-        const pixeles = document.getElementById("AppScreen");
+        const pixeles = document.getElementById("pokeReloj");
         const pixel = document.createElement("span")
         const tipCuadro = ejex === 1? "cuadro-marcado":"cuadro-vacio";
-        
-        pixel.setAttribute("class",`cuadro ${tipCuadro}`)
+        pixel.setAttribute("class",`pkrel ${tipCuadro}`)
         pixeles.appendChild(pixel)
     })
 }
-
-export const imprimirReloj = () => {
+const pikaImg = () => {
+    const pixeles = document.getElementById("pokeReloj");
+    const pixel = document.createElement("img")
+    pixel.setAttribute("class",`pikareloj`)
+    pixel.setAttribute("src", "./img/pika-memeOoO.png")
+    pixel.setAttribute("alt", "pikachu Meme")
+    pixeles.appendChild(pixel)
+}
+const createDiv = () => {
+    const pixeles = document.getElementById("AppScreen");
+    const pixel = document.createElement("div")
+    pixel.setAttribute("id",`pokeReloj`)
+    pixel.setAttribute("class",`pokeReloj`)
+    pixeles.appendChild(pixel)
+}
+export const pokeReloj = () => {
+    createDiv()
     let Clock = getArrayDate()
     for (let ejey = 0; ejey < 9; ejey++) {
         Clock.forEach(time => {
-        pixNum(time,ejey)
-    })
+            pixNum(time,ejey)
+        })
     }
+    pikaImg()
 }
