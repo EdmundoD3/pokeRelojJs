@@ -1,5 +1,5 @@
 import { tablaDeNumeros } from "./pixelArt.js";
-
+import { ligthWatch } from "./Funciones.js";
 const getArrayDate = () => {
     const clock = new Date()
     let time=clock.getHours();
@@ -48,6 +48,7 @@ const createDiv = () => {
     pixeles.appendChild(pixel)
 }
 export const pokeReloj = () => {
+    ligthWatch(true)
     createDiv()
     let Clock = getArrayDate()
     for (let ejey = 0; ejey < 9; ejey++) {
