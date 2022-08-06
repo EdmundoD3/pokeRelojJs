@@ -1,3 +1,4 @@
+import { tablaDeNumeros } from "./pixelArt.js";
 export const ligthWatch = (ligth = true) => {
     const screen = document.getElementById("screen");
     
@@ -10,4 +11,28 @@ export const ligthWatch = (ligth = true) => {
             screen.classList.remove("ligth")
         } 
     }
+}
+
+
+export const createChildInId = (whathId = "none",whatElem="div",
+    addAttribute=[
+        ["id","NameID"],
+        ["Class","NameClass"]
+    ]) => {
+    const pixeles = document.getElementById(`${whathId}`);
+    const pixel = document.createElement(`${whatElem}`)
+    addAttribute.forEach(atrubute =>{
+        pixel.setAttribute(atrubute[0], atrubute[1])
+    } )
+    pixeles.appendChild(pixel)
+}
+
+// Con un array creo numeros o letras para el pixel art
+export const pixNum = (numero=2,ejey=0) => {
+    tablaDeNumeros[numero][ejey].forEach( ejex => {
+        const tipCuadro = ejex === 1? "cuadro-marcado":"cuadro-vacio";
+        createChildInId("pokeReloj","span",[
+            ["class",`pkrel ${tipCuadro}`]
+        ])
+    })
 }

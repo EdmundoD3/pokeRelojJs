@@ -33,7 +33,7 @@ html {
 /* pantalla */
 .pk-screen {
     position: relative;
-    font-size: 50px;
+    font-size: 16rem;
     color: #3d4e28;
 }
 .screen {
@@ -42,8 +42,8 @@ html {
     height: 34rem;
     background-color: #6db072;
     z-index: 20;
-    transform: translateX(-15vh) translateY(5vh);
-    border: 1vh inset  #1e1f19;
+    transform: translateX(-8.55rem) translateY(2.85rem);
+    border: .57rem inset  #1e1f19;
 }
 
 .ligth:active {   /* clase para hacer brillar la pantalla*/
@@ -53,9 +53,9 @@ html {
 /* botones */
 .btn{
     position: absolute;
-    background-color: hsl(358deg 94% 61%);
-    width: 13vh;
-    height: 25vh;
+    background-color: #f93e44;
+    width: 7.4rem;
+    height: 14.25rem;
     transform: translateX(39rem) translateY(7rem);
     border-radius: 5% 75% 0 0;
 }
@@ -127,10 +127,10 @@ html {
 
 .box-counter {
     /* position:relative; this one is new - used to contain absolute elements */
-    width: 200px;
-    height: 80px;
-    border: 10px double #345e30;
-    transform: translateX(30vh) translateY(35.8vh);
+    width: 12.5rem;
+    height: 5rem;
+    border: 0.625rem double #345e30;
+    transform: translateX(17.1rem) translateY(20.4rem);
 }
 
 .plus-block {
@@ -140,7 +140,8 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    outline: .3rem solid #436441 ;
+    outline: .2rem solid #436441 ;
+    border: .1rem solid #436441;
     border-bottom: .4rem solid #345e30;
     transform: translateX(17rem) translateY(20rem);
 }
@@ -148,19 +149,22 @@ html {
     width: 8.6rem;
     height: 8.6rem;
     transform: translateX(17rem) translateY(20.4rem);
-    border-bottom: 0px solid #345e30;
+    border-bottom: .1rem solid #436441;
 }
 .plus {
     height: 8rem;
     line-height: 80%;
     color: #436441;
-    font-size: 150px;
+    font-size: 9.4rem;
     font-weight: 900;
-    text-shadow: 4px 4px 0px #3d4e28,
-    -4px -4px 0px #3d4e28, 
-    4px -4px 0px #3d4e28, 
-    -4px 4px 0px #3d4e28;
+    text-shadow: 0.25rem 0.25rem 0 #3d4e28,
+    -0.25rem -0.25rem 0 #3d4e28, 
+    0.25rem -0.25rem 0 #3d4e28, 
+    -0.25rem 0.25rem 0 #3d4e28;
 }
 .plus::before {
     content: "+";
+}
+.borde {
+    border: .3rem solid #436441 ;
 }

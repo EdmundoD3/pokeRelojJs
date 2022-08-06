@@ -1,5 +1,4 @@
-import { tablaDeNumeros } from "./pixelArt.js";
-import { ligthWatch } from "./Funciones.js";
+import { ligthWatch, pixNum, createChildInId } from "./Funciones.js";
 const getArrayDate = () => {
     const clock = new Date()
     let time=clock.getHours();
@@ -23,38 +22,19 @@ const getArrayDate = () => {
     }
     return [...Dates];
 }
-const pixNum = (numero=2,ejey=0) => {
-    tablaDeNumeros[numero][ejey].forEach( ejex => {
-        const pixeles = document.getElementById("pokeReloj");
-        const pixel = document.createElement("span")
-        const tipCuadro = ejex === 1? "cuadro-marcado":"cuadro-vacio";
-        pixel.setAttribute("class",`pkrel ${tipCuadro}`)
-        pixeles.appendChild(pixel)
-    })
-}
-const pikaImg = () => {
-    const pixeles = document.getElementById("pokeReloj");
-    const pixel = document.createElement("img")
-    pixel.setAttribute("class",`pikareloj`)
-    pixel.setAttribute("src", "./img/pika-memeOoO.png")
-    pixel.setAttribute("alt", "pikachu Meme")
-    pixeles.appendChild(pixel)
-}
-const createDiv = () => {
-    const pixeles = document.getElementById("AppScreen");
-    const pixel = document.createElement("div")
-    pixel.setAttribute("id",`pokeReloj`)
-    pixel.setAttribute("class",`pokeReloj`)
-    pixeles.appendChild(pixel)
-}
+
 export const pokeReloj = () => {
     ligthWatch(true)
-    createDiv()
+    createChildInId("AppScreen","div",[["id", "pokeReloj"],["class","pokeReloj"]])
     let Clock = getArrayDate()
     for (let ejey = 0; ejey < 9; ejey++) {
         Clock.forEach(time => {
             pixNum(time,ejey)
         })
     }
-    pikaImg()
+    createChildInId("pokeReloj","img",[
+        ["class",`pikareloj`],
+        ["src", "./img/pika-memeOoO.png"],
+        ["alt", "pikachu Meme"]
+    ])
 }
