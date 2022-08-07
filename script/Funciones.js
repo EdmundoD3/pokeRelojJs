@@ -13,7 +13,6 @@ export const ligthWatch = (ligth = true) => {
     }
 }
 
-
 export const createChildInId = (whathId = "none",whatElem="div",
     addAttribute=[
         ["id","NameID"],
@@ -28,11 +27,11 @@ export const createChildInId = (whathId = "none",whatElem="div",
 }
 
 // Con un array creo numeros o letras para el pixel art
-export const pixNum = (numero=2,ejey=0) => {
+export const pixNum = (numero=2,ejey=0,childIn="",classFunction="") => {
     tablaDeNumeros[numero][ejey].forEach( ejex => {
         const tipCuadro = ejex === 1? "cuadro-marcado":"cuadro-vacio";
-        createChildInId("pokeReloj","span",[
-            ["class",`pkrel ${tipCuadro}`]
+        createChildInId(`${childIn}`,"span",[
+            ["class",`${classFunction} ${tipCuadro}`]
         ])
     })
 }

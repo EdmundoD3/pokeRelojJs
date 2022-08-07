@@ -117,44 +117,48 @@ html {
     width: 6.9rem;
 }
 /*   Contador   */
+.box-counter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
+    margin: 0;
+    /* position:relative; this one is new - used to contain absolute elements */
+    width: 14.3rem;
+    height: 9rem;
+    border: 1.5rem double #345e30;
+    transform: translateX(12rem) translateY(5rem);
+}
 .pkcontador {
     margin: 0;
     padding: 0;
-    width: .57rem;
-    height: .57rem;
+    width: .75rem;
+    height: .75rem;
     z-index: 26;
 }
 
-.box-counter {
-    /* position:relative; this one is new - used to contain absolute elements */
-    width: 12.5rem;
-    height: 5rem;
-    border: 0.625rem double #345e30;
-    transform: translateX(17.1rem) translateY(20.4rem);
-}
-
 .plus-block {
-    width: 8.6rem;
+    width: 10rem;
     height: 8.6rem;
     border: solid 1px #ccc;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    outline: .2rem solid #436441 ;
-    border: .1rem solid #436441;
-    border-bottom: .4rem solid #345e30;
-    transform: translateX(17rem) translateY(20rem);
+    outline: .3rem solid #102918 ;
+    border: .1rem solid #102918;
+    border-bottom: .4rem solid #528452;
+    transform: translateX(-1.5rem) translateY(20rem);
 }
 .plus-block:active {
-    width: 8.6rem;
-    height: 8.6rem;
-    transform: translateX(17rem) translateY(20.4rem);
-    border-bottom: .1rem solid #436441;
+    transform: translateX(-1.5rem) translateY(20.4rem);
+    border-bottom: .1rem solid #528452;
 }
 .plus {
     height: 8rem;
     line-height: 80%;
-    color: #436441;
+    color: #528452;
     font-size: 9.4rem;
     font-weight: 900;
     text-shadow: 0.25rem 0.25rem 0 #3d4e28,

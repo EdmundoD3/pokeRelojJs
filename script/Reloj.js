@@ -28,8 +28,11 @@ export const pokeReloj = () => {
     createChildInId("AppScreen","div",[["id", "pokeReloj"],["class","pokeReloj"]])
     let Clock = getArrayDate()
     for (let ejey = 0; ejey < 9; ejey++) {
-        Clock.forEach(time => {
-            pixNum(time,ejey)
+        Clock.forEach((time,indice) => {
+            pixNum(time,ejey,"pokeReloj","pkrel")
+            if (indice<Clock.length) {
+                pixNum(11,0,"pokeReloj","pkrel")
+            }
         })
     }
     createChildInId("pokeReloj","img",[
@@ -38,3 +41,4 @@ export const pokeReloj = () => {
         ["alt", "pikachu Meme"]
     ])
 }
+

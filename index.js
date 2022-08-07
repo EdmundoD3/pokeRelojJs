@@ -1,4 +1,5 @@
-import { pokeReloj } from "./script/Reloj.js";
-//import { contador } from "./script/contador.js";
-//contador()
-pokeReloj()
+//import { pokeReloj } from "./script/Reloj.js";
+import { pokeContador } from "./script/contador.js";
+
+pokeContador()
+//pokeReloj()
