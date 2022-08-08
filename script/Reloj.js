@@ -1,5 +1,7 @@
-import { ligthWatch, pixNum, createChildInId,deleteElement } from "./Funciones.js";
+import { pixNum, createChildInId, deleteElement, ligthWatch } from "./Funciones.js";
 export let activo = false
+
+
 
 const getArrayDate = () => {
     const clock = new Date()

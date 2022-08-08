@@ -1,15 +1,18 @@
 import { tablaDeNumeros } from "./pixelArt.js";
 import { apagarReloj } from "./Reloj.js";
+
 export const ligthWatch = (ligth = true) => {
     const screen = document.getElementById("screen");
     
     if (ligth === true) {
         if (screen.classList.contains("ligth")===false) {
             screen.classList.add("ligth")
+            screen.classList.add("shadow-Reloj")
         } 
     }else{
         if (screen.classList.contains("ligth")===true) {
             screen.classList.remove("ligth")
+            screen.classList.remove("shadow-Reloj")
         } 
     }
 }

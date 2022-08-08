@@ -45,6 +45,10 @@ html {
     transform: translateX(-8.55rem) translateY(2.85rem);
     border: .57rem inset  #1e1f19;
 }
+.shadow-Reloj {
+    box-shadow: inset 0 -13px 0  #508050,
+    inset 0 13px 0 #508050;
+}
 
 .ligth:active {   /* clase para hacer brillar la pantalla*/
     background-color: #7fbb83;
@@ -112,8 +116,8 @@ html {
     display: inline-block;
     position: absolute;
     transform: translateX(2.9rem) translateY(20rem) rotatey(180deg);
-    mix-blend-mode: multiply;
-    filter: grayscale(100%); 
+    /* mix-blend-mode: multiply; */
+    /* filter: grayscale(100%);  */
     width: 6.9rem;
 }
 /*   Contador   */
