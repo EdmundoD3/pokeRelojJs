@@ -25,12 +25,14 @@ const getArrayDate = () => {
 
 export const pokeReloj = () => {
     ligthWatch(true)
+    
     createChildInId("AppScreen","div",[["id", "pokeReloj"],["class","pokeReloj"]])
+    // recharge watch
     let Clock = getArrayDate()
     for (let ejey = 0; ejey < 9; ejey++) {
         Clock.forEach((time,indice) => {
             pixNum(time,ejey,"pokeReloj","pkrel")
-            if (indice<Clock.length) {
+            if (indice<Clock.length-1) {
                 pixNum(11,0,"pokeReloj","pkrel")
             }
         })

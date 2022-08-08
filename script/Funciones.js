@@ -26,6 +26,12 @@ export const createChildInId = (whathId = "none",whatElem="div",
     pixeles.appendChild(pixel)
 }
 
+export const deleteElement = (element="none") => {
+    const deleteElement = document.getElementById(`${element}`)
+    if (deleteElement!==null) {
+        deleteElement.remove()
+    }
+}
 // Con un array creo numeros o letras para el pixel art
 export const pixNum = (numero=2,ejey=0,childIn="",classFunction="") => {
     tablaDeNumeros[numero][ejey].forEach( ejex => {

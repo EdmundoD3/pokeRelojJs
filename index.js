@@ -1,5 +1,3 @@
-//import { pokeReloj } from "./script/Reloj.js";
-import { pokeContador } from "./script/contador.js";
+import { start } from "./script/Aplicaciones.js";
 
-pokeContador()
-//pokeReloj()
+start()
