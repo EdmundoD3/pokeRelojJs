@@ -1,4 +1,5 @@
 import { tablaDeNumeros } from "./pixelArt.js";
+import { apagarReloj } from "./Reloj.js";
 export const ligthWatch = (ligth = true) => {
     const screen = document.getElementById("screen");
     
@@ -40,4 +41,8 @@ export const pixNum = (numero=2,ejey=0,childIn="",classFunction="") => {
             ["class",`${classFunction} ${tipCuadro}`]
         ])
     })
+}
+
+export let apagarFunciones = () =>{
+    apagarReloj()
 }

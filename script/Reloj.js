@@ -1,4 +1,6 @@
-import { ligthWatch, pixNum, createChildInId } from "./Funciones.js";
+import { ligthWatch, pixNum, createChildInId,deleteElement } from "./Funciones.js";
+export let activo = false
+
 const getArrayDate = () => {
     const clock = new Date()
     let time=clock.getHours();
@@ -23,9 +25,21 @@ const getArrayDate = () => {
     return [...Dates];
 }
 
+const rechargeWatch = (activo) => {
+    deleteElement("AppScreen")
+    createChildInId("screen","div",[["id", "AppScreen"],["class","App-screen"]])
+    const recharge = document.getElementById("screen")
+    if (activo) {
+        recharge.addEventListener("click", pokeReloj)
+    }else {
+        recharge.removeEventListener('click', pokeReloj);
+    }
+}
+
 export const pokeReloj = () => {
+    activo=true
     ligthWatch(true)
-    
+    rechargeWatch(activo)
     createChildInId("AppScreen","div",[["id", "pokeReloj"],["class","pokeReloj"]])
     // recharge watch
     let Clock = getArrayDate()
@@ -44,3 +58,7 @@ export const pokeReloj = () => {
     ])
 }
 
+export const apagarReloj = () => {
+    activo = false
+    rechargeWatch(activo)
+}
