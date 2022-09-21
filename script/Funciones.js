@@ -13,6 +13,7 @@ export const ligthWatch = (ligth = true) => {
         if (screen.classList.contains("ligth")===true) {
             screen.classList.remove("ligth")
             screen.classList.remove("shadow-Reloj")
+            
         } 
     }
 }

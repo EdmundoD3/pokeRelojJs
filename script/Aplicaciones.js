@@ -1,4 +1,4 @@
-import { pokeReloj, activo } from "./Reloj.js";
+import { startReloj } from "./Reloj.js";
 import { pokeContador } from "./contador.js";
 import { deleteElement, createChildInId, apagarFunciones } from "./Funciones.js";
 
@@ -8,7 +8,7 @@ let listPosition=1
 const App = (numero) => {
     if (numero===0) {
         apagarFunciones()
-        pokeReloj()
+        startReloj()
     }else if (numero === 1) {
         apagarFunciones()
         pokeContador()

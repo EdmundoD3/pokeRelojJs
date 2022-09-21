@@ -3,6 +3,7 @@ html {
     font-size: 16px;
 }
 .container {
+    margin: 0 auto;
     width: 57rem;
     height: 45rem;
     display: flex;

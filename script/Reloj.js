@@ -1,7 +1,6 @@
 import { pixNum, createChildInId, deleteElement, ligthWatch } from "./Funciones.js";
-export let activo = false
-
-
+let activo = false
+// let watchTime
 
 const getArrayDate = () => {
     const clock = new Date()
@@ -38,7 +37,7 @@ const rechargeWatch = (activo) => {
     }
 }
 
-export const pokeReloj = () => {
+const pokeReloj = () => {
     activo=true
     ligthWatch(true)
     rechargeWatch(activo)
@@ -60,7 +59,14 @@ export const pokeReloj = () => {
     ])
 }
 
+export  const startReloj = () => {
+    pokeReloj()
+    // const watchTime = () => setTimeout(pokeReloj,1000)
+    // watchTime()
+}
+
 export const apagarReloj = () => {
     activo = false
     rechargeWatch(activo)
+    // clearTimeout(watchTime)
 }
