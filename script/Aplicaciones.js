@@ -4,7 +4,7 @@ import { deleteElement, createChildInId, apagarFunciones } from "./Funciones.js"
 
 const buttonUp = document.getElementById("btnTop")
 const buttonBottom = document.getElementById("btnBottom")
-let listPosition=1
+let listPosition=0
 const App = (numero) => {
     if (numero===0) {
         apagarFunciones()
@@ -33,7 +33,7 @@ const clickButtonBottom = () => {
     App(listPosition)
 }
 export function start() {
-    pokeContador()
+    startReloj()
     buttonUp.addEventListener("click",clickButtonUp)
     buttonBottom.addEventListener("click",clickButtonBottom)
     
